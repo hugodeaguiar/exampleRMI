@@ -1,0 +1,16 @@
+grant {
+    //Da permissao de acesso ao IP em que esta hospedado o banco de dados, neste caso localhost
+    permission java.net.SocketPermission "127.0.0.1:1099", "accept, resolve";
+    permission java.net.SocketPermission "127.0.0.1:1024-", "accept, resolve";
+    
+    //Permissao para o computador do andersom
+    permission java.net.SocketPermission "192.168.137.5:1099", "accept, resolve";
+    permission java.net.SocketPermission "192.168.137.5:1024-", "accept, resolve";
+    
+    // Permissao para testes locais - IP da maquina
+    permission java.net.SocketPermission "192.168.137.171:1099", "accept, resolve";
+    permission java.net.SocketPermission "192.168.137.171:1024-", "accept, resolve";
+    
+    permission java.util.PropertyPermission "ANTLR_DO_NOT_EXIT", "read";
+    permission java.util.PropertyPermission "ANTLR_USE_DIRECT_CLASS_LOADING", "read";
+};
